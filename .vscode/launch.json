@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "PowerShell: Launch script.ps1",
+            "name": "PowerShell: Repo list",
             "type": "PowerShell",
             "request": "launch",
-            "script": ".\\ps-list-repos.ps1 ",
+            "script": ".\\repos-list.ps1 ",
             "cwd": "${workspaceFolder}",
             "args": ["-organisation \"[ORGINSATION]\" -personalAccessToken \"[ACCESS_TOKEN]\""]
         }
