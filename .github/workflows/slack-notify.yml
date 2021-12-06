@@ -1,0 +1,24 @@
+name: Slack Integration
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, closed]
+  issues:
+    types: [opened, reopened, closed]
+  pull_request_review:
+    types: [submitted]
+  issue_comment:
+    types: [created]
+
+jobs:
+  slack-notification:
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_MESSAGE: ${{ github.event.issue.html_url }}
+          SLACK_TITLE: '${{ github.event.issue.title }}'
+          SLACK_USERNAME: github_bot
