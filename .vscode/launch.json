@@ -8,9 +8,25 @@
             "name": "PowerShell: Repo list",
             "type": "PowerShell",
             "request": "launch",
-            "script": ".\\repos-list.ps1 ",
+            "script": ".\\powershell\\repos-list.ps1 ",
             "cwd": "${workspaceFolder}",
-            "args": ["-organisation \"[ORGINSATION]\" -personalAccessToken \"[ACCESS_TOKEN]\""]
+            "args": ["-organisation \"[ORG]\" -personalAccessToken \"[ACCESS_KEY]\""]
+        },
+        {
+            "name": "PowerShell: Releases list",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": ".\\powershell\\releases-list.ps1 ",
+            "cwd": "${workspaceFolder}",
+            "args": ["-organisation \"[ORG]\" -personalAccessToken \"[ACCESS_KEY]\""]
+        },
+        {
+            "name": "PowerShell: Pipelines list",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": ".\\powershell\\pipelines-list.ps1 ",
+            "cwd": "${workspaceFolder}",
+            "args": ["-organisation \"[ORG]\" -personalAccessToken \"[ACCESS_KEY]\""]
         }
     ]
 }
